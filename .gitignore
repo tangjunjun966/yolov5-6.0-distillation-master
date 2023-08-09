@@ -1,0 +1,13 @@
+*.pt
+
+coco/
+coco128/
+VOC/
+
+*.weights
+
+
+__pycache__/
+.idea/
+
+runs/
