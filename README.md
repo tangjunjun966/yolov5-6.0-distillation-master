@@ -1,14 +1,39 @@
-# yolov5-distillation model
-
-## 第一版预测结果对比
-![](data/images_distill/distill_predect.png)
+# 基于yolov5模型架构目标检测蒸馏
 
 
-<div align="center">
 <p>
    <a align="left" href="https://ultralytics.com/yolov5" target="_blank">
    <img width="850" src="https://github.com/ultralytics/yolov5/releases/download/v1.0/splash.jpg"></a>
 </p>
+
+# 一、测试结果
+## 1、工程数据测试
+教师模型使用yolov5m模型-学生与蒸馏模型使用yolov5s模型，测试结果如下：
+![](data/images_distill/native_project_map0.5-0.95_predect.png)
+PR曲线图：
+![](data/images_distill/native_project_map0.5_predect.png)
+实际测试公司工程项目map0.5与map0.5:0.95均比学生模型高一点点。
+
+## 2、voc2012开源数据测试
+### ①、yolov5m与yolov5s测试
+进一步实验测试，采用开源数据测试。
+教师模型使用yolov5m模型-学生与蒸馏模型使用yolov5s模型，测试结果如下：
+![](data/images_distill/voc2012_map0.5-0.95_predect.png)
+PR曲线图
+![](data/images_distill/voc2012_map0.5_predect.png)
+蒸馏模型在map0.5表现较差0.007个点，但map0.5:0.95却高了0.004个点。
+### ①、yolov5x与yolov5s测试
+
+
+
+
+
+
+
+# 模型安装，参考官网教程
+
+<div align="center">
+
 <br>
 <div>
    <a href="https://github.com/ultralytics/yolov5/actions"><img src="https://github.com/ultralytics/yolov5/workflows/CI%20CPU%20testing/badge.svg" alt="CI CPU testing"></a>
